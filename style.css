@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;600;700;900&display=swap');
 
 :root{
     --green: #2ecc71;
@@ -29,6 +29,11 @@ body{
     color: var(--text-color);
     font-family: 'chivo', sans-serif;
     font-size: 1.6rem;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 img{
@@ -82,17 +87,18 @@ h1 > span{
 }
 
 p{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--text-dark);
-    width: 40rem;
-    line-height: 2.5rem;
+    font-size: 1.8rem;
+    width: 50rem;
+    line-height: 2.8rem;
 }
 
 #email{
     background-color: var(--dark-grey);
-    font-family: 'chivo', sans-serif;
-    font-size: 1.4rem;
-    width: 40rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    width: 50rem;
     margin-bottom: 10px;
     border: none;
     border-radius: 50px;
@@ -114,11 +120,11 @@ p{
 button{
     background-color: var(--main-color);
     color: var(--background);
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 600;
+    font-size: 1.6rem;
     font-family: inherit;
-    width: 15rem;
-    margin-left: -160px;
+    width: 18rem;
+    margin-left: -190px;
     border: none;
     border-radius: 50px;
     padding: 1rem;
@@ -136,6 +142,7 @@ button:hover{
 }
 
 .box-message{
+    font-size: 1.8rem;
     margin-top: 5px;
     display: flex;
     align-items: center;
@@ -182,6 +189,13 @@ button:hover{
 .box-icons > img{
     width: 11rem;
     padding-right: 20px;
+}
+
+.box-backgImage{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
 }
 
 @media (max-width: 1160px){
@@ -291,6 +305,53 @@ button:hover{
         width: 15rem;
         padding: 20px;
     }
+
 }
 
+/* SLIDE ANIMATION */
 
+.intro {
+    background: var(--background);
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.hide {
+    text-align: center;
+    margin-bottom: 0 !important;
+    background: transparent;
+    overflow: hidden;
+}
+
+.hide > img{
+    margin-bottom: 20px;
+}
+
+.hide > span {
+    text-transform: uppercase;
+    font-size: 3rem;
+    transform: translateY(100%);
+    display: inline-block;
+}
+
+.hide > .text_2{
+    color: var(--text-color) !important;
+}
+
+.slider {
+    background: var(--dark-grey);
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+}

@@ -15,16 +15,16 @@ function emailValidation() {
 
 	if(emailValue === '') {
 
-		setErrorFor(email, 'This field cannot be blank');
+		setErrorFor(email, 'O campo não pode ficar vázio!');
 		email.focus();
 
 	} else if (!isValidEmail(emailValue)) {
 
-		setErrorFor(email, 'Oops! This email is invalid');
+		setErrorFor(email, 'Oops! Esse e-mail é inválido.');
 
 	} else {
 
-		setSuccessFor(email, 'Thanks for signing up');
+		setSuccessFor(email, 'Obrigado por se inscrever!');
 		email.disabled = true;
 		return true;
 
